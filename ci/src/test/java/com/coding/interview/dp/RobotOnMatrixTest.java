@@ -60,11 +60,11 @@ public class RobotOnMatrixTest {
     @Test
     public void maxIntegerValue() {
         int[][] matrix = {
-                {5, 3, 1, Integer.MAX_VALUE},
-                {2, 1, 4, 1},
-                {1, 4, 1, 2}
+                {2147483647, -1, -1, -1},
+                {-1, -1, -1, -1},
+                {-1, -1, -1, -1}
         };
         int minPathMam = new RobotOnMatrix().minPathMam(matrix);
-        Assert.assertEquals(13, minPathMam);
+        Assert.assertEquals(2147483642, minPathMam);
     }
 }
