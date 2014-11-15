@@ -26,6 +26,13 @@ public class RobotOnMatrixTest {
     }
 
     @Test
+    public void twoInnerEmptyArrays() {
+        int[][] matrix = {{}, {}};
+        int minPathMam = new RobotOnMatrix().minPathMam(matrix);
+        Assert.assertEquals(-1, minPathMam);
+    }
+
+    @Test
     public void oneCellMatrix() {
         int[][] matrix = {{3}};
         int minPathMam = new RobotOnMatrix().minPathMam(matrix);
@@ -60,11 +67,12 @@ public class RobotOnMatrixTest {
     @Test
     public void maxIntegerValue() {
         int[][] matrix = {
-                {2147483647, -1, -1, -1},
-                {-1, -1, -1, -1},
-                {-1, -1, -1, -1}
+                {2147483642, 1, 1, 1},
+                {1, 1, 1, 1},
+                {1, 1, 1, 1}
         };
         int minPathMam = new RobotOnMatrix().minPathMam(matrix);
-        Assert.assertEquals(2147483642, minPathMam);
+        Assert.assertEquals(2147483647, minPathMam);
     }
+
 }
