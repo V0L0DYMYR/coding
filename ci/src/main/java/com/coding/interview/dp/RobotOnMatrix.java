@@ -13,8 +13,7 @@ public class RobotOnMatrix {
      * Returns min path sum from top-left to bottom-right cell.
      * In case some value or sum of two values are greater or equals Integer.MAX_VALUE
      * then we assume that path trough such elements always is Integer.MAX_VALUE.
-     * Same logic for Integer.MIN_VALUE. If element or sum of elements less or equal Integer.MIN_VALUE
-     * then path through such elements will be Integer.MIN_VALUES.
+     *
      * @param matrix two dimensional array of {@code int}'s.
      * Assumes that any sum path can not be greater than Integer.MAX_VALUE and less than Integer.MIN_VALUE.
      */
@@ -24,24 +23,26 @@ public class RobotOnMatrix {
             int height = matrix.length;
             int width = matrix[0].length;
 
+            int[][] pathCost = new int[height][width];
+
             for (int i = 0; i < height; i++) {
                 for (int j = 0; j < width; j++) {
                     if (i == 0 && j == 0) {
-                        // just skip
+                        pathCost[i][j] = matrix[i][j];
                     } else if (i == 0) {
-                        matrix[i][j] += matrix[i][j - 1];
+                        pathCost[i][j] = matrix[i][j] + pathCost[i][j - 1];
                     } else if (j == 0) {
-                        matrix[i][j] +=  matrix[i - 1][j];
+                        pathCost[i][j] = matrix[i][j] + pathCost[i - 1][j];
                     } else {
-                        int top = matrix[i - 1][j];
-                        int left = matrix[i][j - 1];
+                        int top = pathCost[i - 1][j];
+                        int left = pathCost[i][j - 1];
 
                         int min = Math.min(top, left);
-                        matrix[i][j] += min;
+                        pathCost[i][j] = matrix[i][j] + min;
                     }
                 }
             }
-            res = matrix[height - 1][width - 1];
+            res = pathCost[height - 1][width - 1];
         }
         return res;
     }
