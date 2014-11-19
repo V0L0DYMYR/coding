@@ -3,7 +3,7 @@ package com.coding.interview.dp;
 /**
  * Problem: Given a robot on a matrix.
  * At the beginning robot settled down at top-left cell of matrix.
- * He can move and visit right or bottom cell only.
+ * He can move and visit <b>right</b> or <b>bottom</b> cell only.
  * Robot spends some energy each time he visit cell.
  * You need to find path to bottom-left cell spending min total energy.
  */
@@ -17,7 +17,7 @@ public class RobotOnMatrix {
      * @param matrix two dimensional array of {@code int}'s.
      * Assumes that any sum path can not be greater than Integer.MAX_VALUE and less than Integer.MIN_VALUE.
      */
-    public int minPathMam(int[][] matrix) {
+    public int minPathSum(int[][] matrix) {
         int res = -1;
         if (matrix != null && matrix.length > 0 && matrix[0].length > 0) {
             int height = matrix.length;
