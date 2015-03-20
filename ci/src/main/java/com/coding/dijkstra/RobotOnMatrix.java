@@ -1,4 +1,4 @@
-package com.coding.interview.dijkstra;
+package com.coding.dijkstra;
 
 import java.util.HashSet;
 import java.util.PriorityQueue;

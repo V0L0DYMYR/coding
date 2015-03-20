@@ -1,4 +1,4 @@
-package com.coding.interview.dp;
+package com.coding.dp;
 
 /**
  * Problem: Given a robot on a matrix.

@@ -1,4 +1,4 @@
-package com.coding.interview.dp;
+package com.coding.dp;
 
 import org.junit.Assert;
 import org.junit.Test;

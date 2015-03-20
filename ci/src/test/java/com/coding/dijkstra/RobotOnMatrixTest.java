@@ -1,4 +1,4 @@
-package com.coding.interview.dijkstra;
+package com.coding.dijkstra;
 
 import org.junit.Assert;
 import org.junit.Test;
