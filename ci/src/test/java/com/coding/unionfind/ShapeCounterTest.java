@@ -7,7 +7,7 @@ import static junit.framework.Assert.assertEquals;
 public class ShapeCounterTest {
 
   @Test
-  public void startTest() {
+  public void star() {
     int[][] matrix = {
         {0, 0, 0, 0, 0},
         {0, 0, 1, 0, 0},
