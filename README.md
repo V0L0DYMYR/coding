@@ -1,9 +1,10 @@
-CODING INTERVIEW
+CODING
 
-Set of solutions for basic algorithm problems that we discuss on youtube channel (Coding Interview).
+Set of solutions for basic algorithm problems that we discuss on youtube channel 'Цікаві Задачі'.
 Use, share, discuss, give feedback, contribute, enjoy :)
 
 Topics:
+ * Union-find
  * Dynamic Programming
  * Dijkstra
  
