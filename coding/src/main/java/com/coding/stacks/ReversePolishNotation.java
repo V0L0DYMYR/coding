@@ -37,6 +37,8 @@ public class ReversePolishNotation {
             stack.push(num1 - num2);
           } else if (c == '*') {
             stack.push(num1 * num2);
+          } else if (c == '/') {
+            stack.push(num1 / num2);
           }
         }
       }
