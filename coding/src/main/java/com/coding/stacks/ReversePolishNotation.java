@@ -28,8 +28,8 @@ public class ReversePolishNotation {
             num = num * 10 + digit;
           }
         } else {
-          Integer num1 = stack.pop();
           Integer num2 = stack.pop();
+          Integer num1 = stack.pop();
 
           if (c == '+') {
             stack.push(num1 + num2);
@@ -37,6 +37,8 @@ public class ReversePolishNotation {
             stack.push(num1 - num2);
           } else if (c == '*') {
             stack.push(num1 * num2);
+          } else if (c == '/') {
+            stack.push(num1 / num2);
           }
         }
       }
